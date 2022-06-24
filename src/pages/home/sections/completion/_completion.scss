@@ -1,0 +1,140 @@
+.completion {
+    min-height: 100vh;
+    // background-color: #fff;
+    // background-blend-mode: luminosity;
+    // background-color: color(success);
+    // background-blend-mode: multiply;
+    // background-color: color(primary);
+    // background-blend-mode: color-burn;
+    background-image: url("../../../../assets/images/normal.jpg");
+    background-position: center bottom;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    padding: 4rem 0;
+
+    text-align: center;
+    &-title {
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+    }
+    &-subtitle {
+        text-transform: capitalize;
+    }
+    .container {
+    }
+    &-center {
+    }
+    .icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 2rem;
+        gap: 2rem;
+        img {
+            height: 6rem;
+        }
+    }
+}
+
+@include mq(breakpoint(sm)) {
+    .completion {
+        text-align: left;
+        .icons {
+            justify-content: flex-start;
+        }
+    }
+}
+
+.completion {
+    position: relative;
+    .container-fluid {
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .completion {
+            &-title-secondary {
+                text-align: center;
+                flex: 1;
+                li {
+                    justify-content: center;
+                    transition: 0.3s ease 0.5s;
+                }
+            }
+        }
+
+        & > .wrapper {
+            display: flex;
+            justify-content: space-between;
+            gap: 10vw;
+            .btn {
+                overflow: visible;
+                transition: 0.3s ease;
+                width: 30%;
+                height: 0;
+                position: relative;
+                padding-top: 25%;
+                &.hide {
+                    opacity: 0;
+                }
+
+                &:not(.hide) {
+                    &:hover {
+                        opacity: 0.7;
+                        &:after {
+                            // transform: scale(1.2) !important;
+                        }
+                    }
+                    transition: opacity 0.3s ease !important;
+                }
+                &:after {
+                    position: absolute;
+                    top: 4.5%;
+                    left: 7%;
+                    padding: 3rem 3%;
+                    width: 85%;
+                    height: 75%;
+                    font-size: 4vw;
+                    color: color(dark);
+                    border-radius: 8px;
+                    line-height: 1;
+                    font-weight: 900;
+                    border: 1px solid color(dark);
+                    // opacity: 0;
+                    transition: transform .3s ease;
+                    
+                }
+                &.why-me-left-sign {
+                    transition: opacity 1.5s ease 1s;
+                    transform-origin: left;
+                    &:after {
+                        content: "trap";
+                    }
+                }
+                &.why-me-right-sign {
+                    transform-origin: right;
+                    transition: opacity 1s ease 1s;
+                    &:after {
+                        content: "because i have experience";
+                    }
+                }
+            }
+            img {
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                object-fit: contain;
+                transition: 1s;
+            }
+        }
+    }
+}

@@ -1,0 +1,533 @@
+// DEFAULT SETUP
+
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.1);
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    &:active {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+    // @include mq(1920px) {}//default 16px
+
+    @include mq(2560px) {
+        font-size: 16 * 100 / (1920 * 100 / 2560) + px; //2k
+    }
+    @include mq(3840px) {
+        font-size: 16 * 100 / (1920 * 100 / 3840) + px; //4k
+    }
+}
+
+body {
+    font-family:'SF Pro Display', Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+        "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: color(dark);
+  }
+  
+  h1, .h1 {
+    font-size: calc(1.375rem + 1.5vw);
+    font-weight: bold;
+  }
+  @media (min-width: 1200px) {
+    h1, .h1 {
+      font-size: 8rem;
+    }
+  }
+  
+  h2, .h2 {
+    font-size: calc(1.325rem + 0.9vw);
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  @media (min-width: 1200px) {
+    h2, .h2 {
+      font-size: 6rem;
+    }
+  }
+  
+  h3, .h3 {
+    font-size: calc(1.3rem + 0.6vw);
+  }
+  @media (min-width: 1200px) {
+    h3, .h3 {
+      font-size: 4rem;
+    }
+  }
+  
+  h4, .h4 {
+    font-size: calc(1.275rem + 0.3vw);
+  }
+  @media (min-width: 1200px) {
+    h4, .h4 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  h5, .h5 {
+    font-size: 1.25rem;
+  }
+  
+  h6, .h6 {
+    font-size: 1rem;
+  }
+  
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: color(dark);
+}
+
+img {
+    max-width: 100%;
+}
+
+// CONTAINERS
+
+.container,
+.container-fluid {
+    width: 100%;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container {
+    @include mq(576px) {
+        max-width: 540px; // 36
+    }
+    @include mq(768px) {
+        max-width: 720px; // 48
+    }
+    @include mq(992px) {
+        max-width: 960px; // 32
+    }
+    @include mq(1200px) {
+        max-width: 1140px; // 60
+    }
+    @include mq(1400px) {
+        max-width: 1320px; // 80
+    }
+    @include mq(1920px) {
+        // max-width: mw(xl); //full hd
+    }
+    @include mq(2560px) {
+        max-width: 2400; //2k
+    }
+    @include mq(3840px) {
+        max-width: 3700; //4k
+    }
+}
+
+// BORDERS
+
+.border {
+    border: 1px solid color(dark);
+    &-primary {
+        border-color: color(primary);
+    }
+}
+
+// LINK
+
+.link {
+    &-primary,
+    &-secondary,
+    &-success,
+    &-warning,
+    &-danger,
+    &-dark {
+        text-decoration-line: underline;
+        &:hover {
+            text-decoration-color: inherit;
+        }
+        &[underline="hover"] {
+            text-decoration-line: none;
+            &:hover {
+                text-decoration-line: underline;
+            }
+        }
+        &[underline="always"] {
+            text-decoration-color: inherit;
+            text-decoration-color: currentColor;
+        }
+        &[underline="none"] {
+            text-decoration-line: none;
+        }
+    }
+    &-primary {
+        color: color(primary);
+        text-decoration-color: color(primary, 0.4);
+    }
+    &-secondary {
+        color: color(secondary);
+        text-decoration-color: color(secondary, 0.4);
+    }
+    &-success {
+        color: color(success);
+        text-decoration-color: color(success, 0.4);
+    }
+    &-warning {
+        color: color(warning);
+        text-decoration-color: color(warning, 0.4);
+    }
+    &-danger {
+        color: color(danger);
+        text-decoration-color: color(danger, 0.4);
+    }
+    &-dark {
+        color: color(dark);
+        text-decoration-color: color(dark, 0.4);
+    }
+}
+
+// TEXTS
+
+.text {
+    &-secondary {
+        color: color(secondary);
+    }
+}
+
+//  BACKGROUNDS
+.bg {
+    &-dark {
+        background-color: color(dark);
+    }
+    &-light {
+        background-color: color(light);
+    }
+    &-primary {
+        background-color: color(primary);
+    }
+    &-secondary {
+        background: color(secondary);
+    }
+}
+
+// BORDER RADIUS
+
+.rounded {
+    &-circle {
+        padding: 0;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        position: relative;
+        @include df;
+    }
+    &-pill {
+        border-radius: 50rem !important;
+    }
+}
+
+// MARGIN & PADDING
+
+.m {
+    &-1 {
+        margin: 0.25rem !important;
+    }
+    &-2 {
+        margin: 0.5rem !important;
+    }
+    &-3 {
+        margin: 1rem !important;
+    }
+    &-4 {
+        margin: 1.5rem !important;
+    }
+    &-5 {
+        margin: 3rem !important;
+    }
+    &s,
+    &x {
+        &-1 {
+            margin-left: 0.25rem !important;
+        }
+        &-2 {
+            margin-left: 0.5rem !important;
+        }
+        &-3 {
+            margin-left: 1rem !important;
+        }
+        &-4 {
+            margin-left: 1.5rem !important;
+        }
+        &-5 {
+            margin-left: 3rem !important;
+        }
+        &-auto {
+            margin-left: auto !important;
+        }
+    }
+
+    &e,
+    &x {
+        &-1 {
+            margin-right: 0.25rem !important;
+        }
+        &-2 {
+            margin-right: 0.5rem !important;
+        }
+        &-3 {
+            margin-right: 1rem !important;
+        }
+        &-4 {
+            margin-right: 1.5rem !important;
+        }
+        &-5 {
+            margin-right: 3rem !important;
+        }
+        &-auto {
+            margin-right: auto !important;
+        }
+    }
+
+    &t,
+    &y {
+        &-1 {
+            margin-top: 0.25rem !important;
+        }
+        &-2 {
+            margin-top: 0.5rem !important;
+        }
+        &-3 {
+            margin-top: 1rem !important;
+        }
+        &-4 {
+            margin-top: 1.5rem !important;
+        }
+        &-5 {
+            margin-top: 3rem !important;
+        }
+    }
+    &b,
+    &y {
+        &-1 {
+            margin-bottom: 0.25rem !important;
+        }
+        &-2 {
+            margin-bottom: 0.5rem !important;
+        }
+        &-3 {
+            margin-bottom: 1rem !important;
+        }
+        &-4 {
+            margin-bottom: 1.5rem !important;
+        }
+        &-5 {
+            margin-bottom: 3rem !important;
+        }
+    }
+}
+.p {
+    &-1 {
+        padding: 0.25rem !important;
+    }
+    &-2 {
+        padding: 0.5rem !important;
+    }
+    &-3 {
+        padding: 1rem !important;
+    }
+    &-4 {
+        padding: 1.5rem !important;
+    }
+    &-5 {
+        padding: 3rem !important;
+    }
+    &s,
+    &x {
+        &-1 {
+            padding-left: 0.25rem !important;
+        }
+        &-2 {
+            padding-left: 0.5rem !important;
+        }
+        &-3 {
+            padding-left: 1rem !important;
+        }
+        &-4 {
+            padding-left: 1.5rem !important;
+        }
+        &-5 {
+            padding-left: 3rem !important;
+        }
+        &-auto {
+            padding-left: auto !important;
+        }
+    }
+
+    &e,
+    &x {
+        &-1 {
+            padding-right: 0.25rem !important;
+        }
+        &-2 {
+            padding-right: 0.5rem !important;
+        }
+        &-3 {
+            padding-right: 1rem !important;
+        }
+        &-4 {
+            padding-right: 1.5rem !important;
+        }
+        &-5 {
+            padding-right: 3rem !important;
+        }
+        &-auto {
+            padding-right: auto !important;
+        }
+    }
+
+    &t,
+    &y {
+        &-1 {
+            padding-top: 0.25rem !important;
+        }
+        &-2 {
+            padding-top: 0.5rem !important;
+        }
+        &-3 {
+            padding-top: 1rem !important;
+        }
+        &-4 {
+            padding-top: 1.5rem !important;
+        }
+        &-5 {
+            padding-top: 3rem !important;
+        }
+    }
+    &b,
+    &y {
+        &-1 {
+            padding-bottom: 0.25rem !important;
+        }
+        &-2 {
+            padding-bottom: 0.5rem !important;
+        }
+        &-3 {
+            padding-bottom: 1rem !important;
+        }
+        &-4 {
+            padding-bottom: 1.5rem !important;
+        }
+        &-5 {
+            padding-bottom: 3rem !important;
+        }
+    }
+}
+
+// DISPLAY
+
+.d {
+    &-none {
+        display: none !important;
+    }
+    &-block {
+        display: block !important;
+        width: 100%; //button tags not extending
+    }
+    &-flex {
+        display: flex !important;
+    }
+}
+
+// BADGE
+
+.badge {
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    font-size: 0.75em;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+}
+
+// CONDITIONAL
+
+section {
+    padding: 4rem 0;
+}
+
+@include mq(breakpoint(sm)) {
+    section {
+        padding: 6rem 0;
+    }
+}
+
+.emoji {
+    position: relative;
+    &.show {
+        &:before {
+            transform: translate(-50%,-50%);
+            opacity: 1;
+        }
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        width: 5rem;
+        height: 5rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto 100%;
+        transform: translate(-50%,50%);
+        opacity: 0;
+        transition: transform .3s ease, opacity .3s ease;
+        will-change: transform, opacity;
+        
+    }
+    &-bad {
+        &:before {
+            background-image: url('../../assets/images/bad.png');
+        }
+        
+    }
+    &-good {
+        &:before {
+            background-position: center bottom;
+            background-size: auto 80%;
+            background-image: url('../../assets/images/good.png');
+        }
+
+    }
+}

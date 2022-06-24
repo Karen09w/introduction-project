@@ -1,0 +1,46 @@
+.safe-place {
+    display: flex;
+    align-items: flex-end;
+    padding: 0;
+    background-image: url('../../../../assets/images/grudge.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: color(dark);
+
+    
+    & > .wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 10vw;
+        & > .wrapper {
+            display: flex;
+            flex-direction: column;
+            .btn {
+                max-width: 15rem;
+                img {
+                    margin: 0;
+
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .btn {
+            overflow: visible;
+            transition: .3s ease;
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+        img {
+            width: 100%;
+            max-width: 20rem;
+            margin: 3rem;
+            transition: transform .3s ease;
+            cursor: pointer;
+           
+        }
+    }
+}

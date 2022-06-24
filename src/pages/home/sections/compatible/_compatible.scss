@@ -1,0 +1,26 @@
+.compatible {
+    background-color: color(dark);
+    &-title {
+        a {
+            color: #fff;
+        }
+    }
+    img {
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+        display: block;
+    }
+    .swiper {
+        overflow: visible;
+    }
+    .swiper-slide-active {
+        .emoji {
+            &:before {
+                opacity: 1;
+                transform: translate(-100%,-50%);
+                transition: transform .3s ease 0.3s, opacity .3s ease 0.3s;
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.support {
+    display: flex;
+    background-color: color(light);
+
+    .container {
+        flex: 1;
+        
+        display: flex;
+        flex-direction: column;
+    }
+    &-title {
+    }
+    &-center {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        svg {
+            max-width: 35rem;
+        }
+    }
+}

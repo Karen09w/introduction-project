@@ -1,0 +1,31 @@
+// GLOBALS
+@import "./partials/fonts";
+@import "./partials/features";
+@import './partials/global';
+@import './partials/lazy-load';
+@import './partials/custom-swiper';
+
+// COMPONENTS
+@import '../components/navbar/navbar';
+@import '../components/header/header';
+@import '../components/footer/footer';
+@import '../components/buttons/button';
+@import '../components/cards/browser-card/browser-card';
+@import '../components/cards/neomorphic/neomorphic';
+
+// PAGES
+@import '../pages/home/home';
+@import '../pages/error/error';
+
+// SECTIONS 
+@import '../pages/home/sections/animation/animation';
+@import '../pages/home/sections/compatible/compatible';
+@import '../pages/home/sections/why-me/why-me';
+@import '../pages/home/sections/branches/branches';
+@import '../pages/home/sections/jason/jason';
+@import '../pages/home/sections/safe-place/safe-place';
+@import '../pages/home/sections/communication/communication';
+@import '../pages/home/sections/support/support';
+@import '../pages/home/sections/completion/completion';
+
+

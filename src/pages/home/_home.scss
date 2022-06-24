@@ -1,0 +1,224 @@
+@include mq(breakpoint(md)) {
+    section {
+        min-height: 100vh;
+        // border: 1px solid red;
+    }
+}
+
+
+// TRACK
+
+.track {
+    padding-bottom: 0;
+    background-color: color(success);
+    display: flex;
+    flex-direction: column;
+    .container {
+        flex: 1;
+    }
+    &-title {
+        margin-bottom: 2rem;
+        text-align: center;
+        a {
+            // color: color(light) ;
+        }
+    }
+
+    .wrapper {
+        text-align: center;
+    }
+    .emoji {
+
+        flex: 1;
+    }
+    .audio {
+        width: 100%;
+        padding: 4rem 0.75rem;
+        cursor: pointer;
+        transition: transform 0.3s ease-out;
+        position: relative;
+        &:hover:not(:active) {
+            transform: scale(1.05);
+            border-radius: 0.3rem;
+            z-index: 1;
+        }
+   
+        &-title {
+            font-size: 1.2rem;
+            text-transform: capitalize;
+            margin-bottom: 1.5rem;
+        }
+        h5 {
+            color: #fff;
+        }
+        .audio-icon {
+            background-color: color(light);
+            svg path {
+                fill: color(dark);
+            }
+        }
+        &-pure {
+            // background-color: color(success-v2);
+        }
+        &-bad {
+            // background-color: color(danger);
+        }
+
+        &-icon {
+            border-radius: 50%;
+            width: 5rem;
+            height: 5rem;
+            transition: transform 0.3s ease;
+            outline: none;
+        }
+        svg {
+            height: 2rem;
+        }
+    }
+}
+
+@include mq(breakpoint(sm)) {
+    .track {
+        &-title {
+            text-align: left;
+        }
+        &-bottom {
+            display: flex;
+        }
+    }
+}
+@include mq(breakpoint(xl)) {
+    .track {
+        .audio {
+            &-title {
+                font-size: 4rem;
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+// SERVICE
+
+.service {
+    display: flex;
+    flex-direction: column;
+    &-title {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    .container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    &-center {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        img {
+            width: 100%;
+            max-width: 600px;
+        }
+    }
+}
+
+@include mq(breakpoint(sm)) {
+    .service {
+        &-title {
+            text-align: right;
+        }
+    }
+}
+
+// RESPONSIVE
+
+.responsive {
+    display: flex;
+    flex-direction: column;
+    background-color: color(light);
+    .container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    &-title {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    &-center {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 100%;
+            max-width: 1000px;
+        }
+    }
+}
+
+// PIXEL PERFECT
+.pixel-perfect {
+    &-title {
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+    &-center {
+        img {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+}
+
+@include mq(breakpoint(sm)) {
+    .pixel-perfect {
+        &-title {
+            text-align: left;
+        }
+    }
+}
+
+
+// SEO 
+
+.seo {
+    &-title {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    &-center {
+        text-align: center;
+    }
+    img {
+        width: 100%;
+        max-width: 700px;
+    }
+}
+
+@include mq(breakpoint(sm)) {
+    .seo {
+        &-title {
+            text-align: left;
+            margin-bottom: 4rem;
+        }
+    }
+}
+
+// WRONG SECTION
+
+.wrong-section {
+    background-image: url('../../assets/images/banana-monkey.gif');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &-title {
+        a {
+            color: #fff;
+        }
+    }
+}
