@@ -2,7 +2,6 @@ import ufo from "./assets/images/ufo.png";
 const images = {
     ufo,
     example: require("./assets/images/example.jpg"),
-    dna: require("./assets/images/dna.png"),
     photoshop: require("./assets/images/icons/photoshop.png"),
     figma: require("./assets/images/icons/figma.png"),
     sketch: require("./assets/images/icons/sketch.png"),
@@ -14,7 +13,6 @@ const images = {
     funeral: require("./assets/images/funeral.jpg"),
     mountains: require("./assets/images/neomorphic/mountains.jpg"),
     milk: require("./assets/images/neomorphic/milk.jpg"),
-    placeholder: require("./assets/images/placeholder.jpg"),
 
     flower: require("./assets/images/neomorphic/flower.jpg"),
     geans: require("./assets/images/neomorphic/geans.jpg"),
@@ -27,7 +25,6 @@ const images = {
     flowers: require("./assets/images/flowers.png"),
     safePlace: require("./assets/images/safe-place.png"),
 
-    butterflies: require("./assets/images/butterflies.png"),
     rainbow: require("./assets/images/rainbow.png"),
     icecream: require("./assets/images/icecream.png"),
     elmStreet: require("./assets/images/elm-street.png"),

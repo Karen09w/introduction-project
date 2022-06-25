@@ -5,7 +5,7 @@ import {useGlobalContext} from '../../../../context'
 
 let timeout = null;
 
-export default function WhyMe() {
+export default function WhyMe({whyMeLeftSign,whyMeRightSign}) {
     const { risk, flowers } = localData.images;
 
     const [isGood, setIsGood] = useState(false);
@@ -41,6 +41,7 @@ export default function WhyMe() {
                             setIsBad(true);
                             setIsBadPlaying(false)
                             setIsPurePlaying(true)
+                            document.querySelector('.branches .swiper-custom-angle-left').click()
                         }}
                     />
                 </Button>
@@ -53,6 +54,7 @@ export default function WhyMe() {
                         onClick={() => {
                             setIsGood(true);
                             setIsBad(false);
+                            document.querySelector('.branches .swiper-custom-angle-right').click()
                         }}
                     />
                 </Button>

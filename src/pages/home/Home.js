@@ -36,9 +36,6 @@ export default function Home() {
     //
 
     useEffect(() => FadeOnScreen.createObserver(), []);
-    // useEffect(()=>{
-    //     window.scrollTo(0, 0);
-    // },[])
 
     return (
         <>
@@ -48,14 +45,12 @@ export default function Home() {
                     <div className="container">
                         <h2 className="track-title">
                             <li style={{ overflow: "hidden" }}>
-                                <a data-lazy="fade-up">let's turn </a>
+                                <a data-lazy="fade-up">but first,</a>
                             </li>
                             <li style={{ overflow: "hidden" }}>
-                                <a data-lazy="fade-up">some music on</a>
+                                <a data-lazy="fade-up">let the music play</a>
                             </li>
-                            <li style={{ overflow: "hidden" }}>
-                                <a data-lazy="fade-up">and then continue</a>
-                            </li>
+                         
                         </h2>
                     </div>
                     <div className="track-bottom">

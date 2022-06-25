@@ -74,6 +74,7 @@ export default function SafePlace() {
                             setIsBad(false);
                             setIsBadPlaying(true)
                             setIsPurePlaying(false)
+                            document.querySelector('.branches .swiper-custom-angle-right').click()
                         }}
                     />
                 </Button>

@@ -5,7 +5,7 @@ import { Jason, WhyMe, SafePlace } from "..";
 import localData from "../../../../localData";
 import { Button } from "../../../../components";
 import { useGlobalContext } from "../../../../context";
-import {Completion} from '../'
+import { Completion } from "../";
 
 export default function Branches() {
     const { communication, support } = localData.svgs;
@@ -18,6 +18,12 @@ export default function Branches() {
     return (
         <div className="branches" id="branches">
             <div className={`swiper-custom-wrapper`}>
+            <div className="swiper-custom-center">
+                        <span className="swiper-custom-angle swiper-custom-angle-left" ref={navigationPrevRef}>
+                        </span>
+                        <span className="swiper-custom-angle swiper-custom-angle-right" ref={navigationNextRef}>
+                        </span>
+                    </div>
                 <Swiper
                     onSwiper={setBranchesSwiper}
                     touchStartPreventDefault={false}
@@ -27,28 +33,13 @@ export default function Branches() {
                     initialSlide="1"
                     slidesPerView={1}
                     onSlideChange={(e) => {}}
-                    navigation={{
-                        prevEl: [
-                            document.getElementsByClassName("why-me-left-sign")[0],
-                        ],
-                        nextEl: [
-                            document.getElementsByClassName("safe-place-right-sign")[0],
-                            document.getElementsByClassName("why-me-right-sign")[0],
-                        ],
-                    }}
+                  
                     speed={1000}
                     onBeforeInit={(swiper) => {
                         swiper.params.navigation.prevEl = navigationPrevRef.current;
                         swiper.params.navigation.nextEl = navigationNextRef.current;
                     }}
-                    // onTransitionEnd={() => {
-                    //     document.querySelector(".branches .wrapper-scary").scrollTo(0, 0);
-                    //     document.querySelector(".branches .wrapper-good").scrollTo(0, 0);
-                    // }}
-                    // pagination={{ clickable: true }}
                     centeredSlides={true}
-                    // centeredSlidesBounds={true}
-                    // scrollbar={{ draggable: true }}
                     breakpoints={{
                         640: {
                             slidesPerView: 1,

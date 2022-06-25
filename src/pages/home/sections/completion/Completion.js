@@ -30,7 +30,7 @@ export default function Completion() {
                         <img src={sketch} alt="sketch" />
                     </div>
                     <h1 className={`completion-title ${isSectionDisplayed ? "" : "hide"}`} data-lazy="fade">
-                        html convertion
+                        html conversion
                     </h1>
 
                     <div>
@@ -48,14 +48,11 @@ export default function Completion() {
             </div>
 
             <div className="container-fluid">
-                <h1 className="completion-title-secondary">
+                <h2 className="completion-title-secondary">
                     <li className={`d-flex ${!isSectionDisplayed ? "" : "hide"}`} data-lazy="fade">
-                        <span data-lazy="fade-up" style={{ display: "inline-block", marginRight: "2rem" }}>
                             so why choose me?
-                        </span>
-                        {/* <span data-lazy="fade-left">Communication</span> */}
                     </li>
-                </h1>
+                </h2>
 
                 <div className={`wrapper `}>
                     <Button

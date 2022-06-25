@@ -19,7 +19,7 @@ export default function Header({ title, children }) {
                         <img src={figma} alt="figma" />
                         <img src={sketch} alt="sketch" />
                     </div>
-                    <h1 className="hero-title"  data-lazy='fade-hide'>html convertion</h1>
+                    <h1 className="hero-title"  data-lazy='fade-hide'>html conversion</h1>
 
                     <div>
                         <h3 className="hero-subtitle"  data-lazy='fade-hide'>fully responsive</h3>
@@ -31,6 +31,7 @@ export default function Header({ title, children }) {
                         <span data-lazy='fade'>my name is Karen </span>
                         <span data-lazy='fade'>and this is my gig</span>
                         <span data-lazy='fade'>of html conversion</span>
+                        <span data-lazy='fade' className="color-success">let's start</span>
                     </h1>
                 </div>
             </div>

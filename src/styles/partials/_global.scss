@@ -221,6 +221,13 @@ img {
     }
 }
 
+// COLOR 
+.color {
+    &-success {
+        color: color(success);
+    }
+}
+
 //  BACKGROUNDS
 .bg {
     &-dark {

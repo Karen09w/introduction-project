@@ -1,5 +1,6 @@
 import CONSTANTS from "../constants/constants.js";
 
+
 const FadeOnScreen = (function () {
     let observer = null;
     let blocks = null;
